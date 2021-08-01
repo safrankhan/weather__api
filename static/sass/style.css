@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.weather_box {
+  background-color: #b3cdf5;
+  height: 80%;
+  width: 25%;
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.weather_box .wave {
+  position: relative;
+}
+
+.weather_box .wave .sun {
+  position: absolute;
+  width: 64rem;
+  height: 64rem;
+}
+
+.weather_box .wave .wave1 {
+  top: .5rem;
+  left: -30rem;
+  background-color: #f4f5fa;
+  opacity: 0.4;
+  border-radius: 50rem 39rem 30rem 69rem;
+  -webkit-animation: 20s linear 0s infinite alternate move_eye;
+          animation: 20s linear 0s infinite alternate move_eye;
+  -webkit-transform: translate3d(0, 0, 1);
+          transform: translate3d(0, 0, 1);
+}
+
+@-webkit-keyframes move_eye {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes move_eye {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes cloud {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes cloud {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.weather_box .wave .wave2 {
+  top: -1rem;
+  left: -30rem;
+  opacity: .4;
+  border-radius: 50rem 39rem 30rem 39rem;
+  background-color: #f4f5fa;
+  -webkit-animation: 20s linear 0s infinite alternate move_eye;
+          animation: 20s linear 0s infinite alternate move_eye;
+}
+
+.weather_box .wave .wave3 {
+  top: -1rem;
+  left: -30rem;
+  opacity: 0.4;
+  border-radius: 50rem 39rem 30rem 49rem;
+  background-color: #f4f5fa;
+  -webkit-animation: 20s linear 0s infinite alternate cloud;
+          animation: 20s linear 0s infinite alternate cloud;
+}
+
+.weather_box .info {
+  z-index: 99 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.weather_box .info h4 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.weather_box .info h3 {
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  color: darkcyan;
+}
+
+.weather_box .info #street {
+  -webkit-animation: 2s linear 0s infinite alternate street;
+          animation: 2s linear 0s infinite alternate street;
+}
+
+@-webkit-keyframes street {
+  from {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+  to {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@keyframes street {
+  from {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+  to {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+.weather_box .temp {
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.weather_box .temp h2 {
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.weather_box .temp h3 {
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  color: darkcyan;
+}
+
+.status {
+  -webkit-animation: 2s linear 0s infinite alternate status;
+          animation: 2s linear 0s infinite alternate status;
+}
+
+@-webkit-keyframes status {
+  from {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(2, 2);
+            transform: scale(2, 2);
+  }
+}
+
+@keyframes status {
+  from {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(2, 2);
+            transform: scale(2, 2);
+  }
+}
+/*# sourceMappingURL=style.css.map */
